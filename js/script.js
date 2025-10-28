@@ -1,5 +1,5 @@
 //sounds
-  const bgAudio = new Audio('../sounds/lofi.mp3');
+  const bgAudio = new Audio('..sounds/lofi.mp3');
   bgAudio.volume = 0; // start silent for fade-in effect
 
   const fadeIn = () => {
