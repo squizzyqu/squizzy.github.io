@@ -1,5 +1,5 @@
-//sounds
-  const bgAudio = new Audio('../sounds/lofi.mp3');
+//bg music
+  const bgAudio = new Audio('../sounds/lofi.ogg');
   bgAudio.volume = 0; // start silent for fade-in effect
 
   const fadeIn = () => {
@@ -20,7 +20,7 @@
     }, stepTime);
   };
 
-// Unmute + fade in after user interaction
+// unmute + fade in after user interaction
   const enableSound = () => {
     bgAudio.muted = false;
     bgAudio.play().then(fadeIn);
