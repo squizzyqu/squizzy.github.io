@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   
   <audio id="click-sound" src="sounds/click2.mp3" preload="auto"></audio>
+  <audio id="twinkle-sound" src="sounds/twinkle.mp3" preload="auto"></audio>
   
   <style>
     /* Hover effect for SVG icons */
@@ -43,6 +44,25 @@
       visibility: visible;
       opacity: 1;
     }
+    /* Prevent text selection */
+    .flex-container-mainbody {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    }
+
+    .flex-container-header {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    }
+
+    .flex-container-footer {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    }
+
   </style>
 </head>
 
@@ -66,10 +86,32 @@
     <!-- Body Content -->
     <div class="flex-item-mainbody-body">
       <p class="mainbody-body-text-hi">
-        hi!&nbsp;<span class="mainbody-body-text-hi-highlight">i'm squizzyqu</span>
+        hi!&nbsp;<span class="mainbody-body-text-hi-highlight" onclick="playTwinkle()">i'm squizzyqu</span>
       </p>
       <p class="mainbody-body-text-skills">artist, animator, developer</p>
+
+      <div class="mainbody-body-buttons">
+        <div class="mainbody-body-button-about">
+          <button class="button-about" onclick="playClick()">about</button>
+        </div>
+        <div class="mainbody-body-button-socials">
+          <button class="button-links" onclick="playClick()">links</button>
+        </div>
+        <div class="mainbody-body-button-work">
+          <button class="button-work" onclick="playClick()">work</button>
+        </div>
+        <div class="mainbody-body-button-contact">
+          <button class="button-contact" onclick="playClick()">contact</button>
+        </div>
+        <div class="mainbody-body-button-faq">
+          <button class="button-faq" onclick="playClick()">faq</button>
+        </div>
+      </div>
+
     </div>
+
+  </div>
+
   </div>
 
   <!-- Footer -->
