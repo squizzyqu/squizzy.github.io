@@ -44,14 +44,18 @@ body {
 /* Main Body Container */
 .flex-container-mainbody {
     display: flex;
+    position: fixed;
+    inset-block-start: 47%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
     flex-direction: column;
-    inline-size: 70%;
-    max-inline-size: 800px; /* same as HOME bar and main box */
+    inline-size: 90%;
+    max-inline-size: 800px; /* same as home bar and main box */
     margin: 20px 0;
     align-items: center;
 }
 
-/* Top Bar (HOME) */
+/* Top Bar (home) */
 .flex-item-mainbody-bar {
     background-color: #4d4d4d;
     border-radius: 10px 10px 0 0;
@@ -66,7 +70,7 @@ body {
     color: #ffffff;
     font-size: 1rem;
     text-align: start;
-    padding-inline-start: 20px; /* keep HOME text left-aligned */
+    padding-inline-start: 20px; /* keep home text left-aligned */
 }
 
 /* Middle Box */
@@ -102,6 +106,7 @@ body {
 .mainbody-body-text-hi-highlight {
     color: #855af1;
     font-weight: bolder;
+    transition: color 0.1s ease-in-out;
 }
 
 .mainbody-body-text-skills {
@@ -110,6 +115,206 @@ body {
     color: #3d3d3d;
     margin-block-start: 1px;
     text-align: center;
+}
+
+/* Body Button */
+
+.mainbody-body-buttons {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100%;
+    position: relative;
+    inset-block-start: 10px;
+    block-size: clamp(100px, 30vh, 50px); /* responsive height */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button-about {
+    background-color: #ffffff;
+    font-family: "MontserratLight", sans-serrif;
+    padding: 15px;
+    border: 1.3px solid #909090;
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+}
+
+.button-about:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
+
+.button-about:active {
+    transform: scale(.95);
+    background-color: #eaeaea;
+    box-shadow: 0px 5px rgba(0,0,0,0);
+}
+
+.button-links {
+    background-color: #ffffff;
+    font-family: "MontserratLight", sans-serrif;
+    padding: 15px 15px;
+    border: 1.3px solid #909090;
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+}
+
+.button-links:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
+
+.button-links:active {
+    transform: scale(.95);
+    background-color: #eaeaea;
+    box-shadow: 0px 5px rgba(0,0,0,0);
+}
+
+.button-work {
+    background-color: #ffffff;
+    font-family: "MontserratLight", sans-serrif;
+    padding: 15px;
+    border: 1.3px solid #909090;
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+}
+
+.button-work:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
+
+.button-work:active {
+    transform: scale(.95);
+    background-color: #eaeaea;
+    box-shadow: 0px 5px rgba(0,0,0,0);
+}
+
+.button-contact {
+    background-color: #ffffff;
+    font-family: "MontserratLight", sans-serrif;
+    padding: 15px;
+    border: 1.3px solid #909090;
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+}
+
+.button-contact:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
+
+.button-contact:active {
+    transform: scale(.95);
+    background-color: #eaeaea;
+    box-shadow: 0px 5px rgba(0,0,0,0);
+}
+
+.button-faq {
+    background-color: #ffffff;
+    font-family: "MontserratLight", sans-serrif;
+    padding: 15px;
+    border: 1.3px solid #909090;
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+}
+
+.button-faq:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 5px rgba(0,0,0,0.1);
+}
+
+.button-faq:active {
+    transform: scale(.95);
+    background-color: #eaeaea;
+    box-shadow: 0px 5px rgba(0,0,0,0);
+}
+
+/* Body Text */
+.about-body-text-intro {
+    display: flex;
+    flex-direction: row;      /* horizontal layout */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #3d3d3d;
+    line-height: .1;
+    text-align: center;
+    white-space: nowrap;      /* <-- prevents line break */
+}
+
+.about-body-text-skills {
+    display: flex;
+    flex-direction: row;      /* horizontal layout */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #3d3d3d;
+    line-height: .1;
+    text-align: center;
+    white-space: nowrap;      /* <-- prevents line break */
+}
+
+.about-body-text-header-education {
+    display: flex;
+    flex-direction: row;      /* horizontal layout */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #3d3d3d;
+    line-height: .1;
+    text-align: center;
+    white-space: nowrap;      /* <-- prevents line break */
+}
+
+.about-body-text-education {
+    display: flex;
+    flex-direction: row;      /* horizontal layout */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #3d3d3d;
+    line-height: .1;
+    text-align: center;
+    white-space: nowrap;      /* <-- prevents line break */
+}
+
+.about-body-text-header-hobbies {
+    display: flex;
+    flex-direction: row;      /* horizontal layout */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #3d3d3d;
+    line-height: .1;
+    text-align: center;
+    white-space: nowrap;      /* <-- prevents line break */
+}
+
+.about-body-text-hobbies {
+    display: flex;
+    flex-direction: row;      /* horizontal layout */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #3d3d3d;
+    line-height: .1;
+    text-align: center;
+    white-space: nowrap;      /* <-- prevents line break */
 }
 
 /* Footer */
@@ -184,6 +389,10 @@ body {
     visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(-5px);
+}
+
+.flex-item-SVG-icons a:active {
+    transform: scale(0.9);
 }
 
 /* Footer copyright */
