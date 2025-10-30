@@ -29,6 +29,7 @@
   };
 
   document.addEventListener("click", enableSound);
+  document.addEventListener("touchstart", enableSound);
 
 //Click sound
 function playClick() {
