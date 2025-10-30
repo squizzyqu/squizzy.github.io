@@ -1,6 +1,7 @@
-//bg music
-  const bgAudio = new Audio('../sounds/lofi.ogg');
+//Background music
+  const bgAudio = new Audio('/sounds/lofi.mp3');
   bgAudio.volume = 0; // start silent for fade-in effect
+  bgAudio.loop = true;
 
   const fadeIn = () => {
     let volume = 0;
@@ -20,7 +21,7 @@
     }, stepTime);
   };
 
-// unmute + fade in after user interaction
+//Unmute + fade in after user interaction
   const enableSound = () => {
     bgAudio.muted = false;
     bgAudio.play().then(fadeIn);
@@ -29,7 +30,7 @@
 
   document.addEventListener("click", enableSound);
 
-//click sound
+//Click sound
 function playClick() {
     const clickAudio = document.getElementById("click-sound");
     if (clickAudio) {
@@ -38,14 +39,23 @@ function playClick() {
     }
   }
 
-//time display
+//Twinkle sound
+function playTwinkle() {
+    const clickAudio = document.getElementById("twinkle-sound");
+    if (clickAudio) {
+      clickAudio.currentTime = 0;
+      clickAudio.play().catch(() => {});
+    }
+  }
+
+//Time display
   document.addEventListener('DOMContentLoaded', function () {
   const dateEl = document.querySelector('.header-text-squizzyqu');
 
   function updateTime() {
     const now = new Date();
     const options = {
-      timeZone: 'America/New_York', // Eastern Time (EST/EDT)
+      timeZone: 'America/New_York', // eastern time (est/edt)
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
